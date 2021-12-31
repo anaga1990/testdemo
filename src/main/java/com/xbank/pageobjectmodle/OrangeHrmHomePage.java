@@ -87,8 +87,8 @@ public class OrangeHrmHomePage extends BaseCl {
 		String statusDetailsFromPage = verifyStatus.getText().trim();
 		String userRoleDetailsFromPage = verifyUserRole.getText().trim();
 		String employeeDetailsFromPage = verifyEmployeeName.getText().trim();
-		return userDetailsFromPage + ":" + statusDetailsFromPage + ":" + userRoleDetailsFromPage + ":"
-				+ employeeDetailsFromPage;
+		return userDetailsFromPage + ":" + userRoleDetailsFromPage + ":" + employeeDetailsFromPage + ":"
+				+ statusDetailsFromPage;
 
 	}
 
