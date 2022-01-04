@@ -55,6 +55,11 @@ public class OrangeHrmHomePage extends BaseCl {
 
 	@FindBy(xpath = "//table[@id='resultTable']/tbody//td[5]")
 	WebElement verifyStatus;
+	
+	@FindBy(xpath = "//a[@id='menu_admin_Job']")
+	WebElement jobsSubMenu;
+	
+	// Admin Menu actions END
 
 	public OrangeHrmHomePage() {
 		PageFactory.initElements(driver, this);
@@ -62,6 +67,11 @@ public class OrangeHrmHomePage extends BaseCl {
 
 	public void clickOnAdmin() {
 		adminMenu.click();
+	}
+	
+	public void clickOnAdminAndJobsSubMenu() {
+		adminMenu.click();
+		jobsSubMenu.click();
 	}
 
 	public void clickOnPim() {

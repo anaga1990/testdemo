@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import com.xbank.core.BaseCl;
 import com.xbank.pageobjectmodle.OrangeHrmLoginPage;
+import com.xbank.pageobjectmodle.OrangeHrmLoginPageDiffeentWaysToCallMethods;
 
 public class TC01OHrmLoginPageTest extends BaseCl {
 
@@ -18,7 +19,7 @@ public class TC01OHrmLoginPageTest extends BaseCl {
 	
 	@Test(enabled = false)
 	public void logintest() {
-		OrangeHrmLoginPage loginpage = new OrangeHrmLoginPage();
+		OrangeHrmLoginPageDiffeentWaysToCallMethods loginpage = new OrangeHrmLoginPageDiffeentWaysToCallMethods();
 		//ctrl+shift+o
 		loginpage.enterTheUsername();
 		loginpage.enterThePassword();
@@ -36,9 +37,9 @@ public class TC01OHrmLoginPageTest extends BaseCl {
 	
 	@Test(priority = 2)
 	public void logintestApproachThree() {
-		OrangeHrmLoginPage loginpage = new OrangeHrmLoginPage();
+		OrangeHrmLoginPageDiffeentWaysToCallMethods loginpage = new OrangeHrmLoginPageDiffeentWaysToCallMethods();
 		//loginpage.login("Admin", "admin123");
-		loginpage.login(prs.getProperty("username"), prs.getProperty("password"));
+		loginpage.loginWithUserProvidedDetails(prs.getProperty("username"), prs.getProperty("password"));
 		System.out.println("comming form logintestApproachThree method (): Title Of the Page "+driver.getTitle());
 	}
 	
