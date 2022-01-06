@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="basePath">./logs</Property>
+	</Properties>
+	<Appenders>
+		<RollingFile name="rolingFie"
+			fileName="${basePath}/automation_info.log"
+			filePattern="${basePath}/automation_info.%d{dd-MM-YYYY HH:mm:ss}.log.gz"
+			ignoreExceptions="false">
+			<PatternLayout>
+				<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="50" />
+		</RollingFile>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.xbank.sanity" level="error" additivity="false"><!-- additivity="false" will elimenate duplicate runs -->
+			<AppenderRef ref="rolingFie"/>
+		</Logger>
+		<Root level="trace">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>

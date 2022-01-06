@@ -1,0 +1,13 @@
+2022-01-06 21:22:55.823 ERROR Admin value not ok, or verification Failed
+2022-01-06 21:25:51.304 INFO  OrangeHrmLoginPage created
+2022-01-06 21:26:00.800 INFO  clickOnAdmin success
+2022-01-06 21:26:05.482 ERROR Admin value not ok, or verification Failed
+2022-01-06 21:26:05.487 INFO  userSearchInAdminMenuWithSOftAssert completed
+2022-01-06 21:26:14.406 INFO  startBrowser Success
+2022-01-06 21:26:30.100 INFO  comming form logintestApproachThree method (): Title Of the Page OrangeHRM
+2022-01-06 21:26:33.696 INFO  Browser closed Success
+
+server.log
+info.log
+error.log
+debug.log

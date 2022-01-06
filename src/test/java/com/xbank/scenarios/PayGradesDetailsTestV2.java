@@ -15,9 +15,13 @@ public class PayGradesDetailsTestV2 extends BaseCl{
 	@Test
 	public void getDetailsFrompayGrades() {
 		OrangeHrmLoginPageV2 loginPage = new OrangeHrmLoginPageV2();
+		System.out.println("OrangeHrmLoginPageV2 object creation successfull");
 		OrangeHrmHomePageV2 homePage = loginPage.login();
+		System.out.println("OrangeHrmHomePageV2 object creation successfull");
 		AdminMenuPageV2 adminMenu = homePage.clickOnAdmin();
+		System.out.println("AdminMenuPageV2 object creation successfull");
 		adminMenu.clickOnJobsubMenu();
+		System.out.println("clickOnJobsubMenu clicked successfull");
 		adminMenu.clickOnpayGrades();
 		adminMenu.FetchDetailsFrompayGrades();
 	}

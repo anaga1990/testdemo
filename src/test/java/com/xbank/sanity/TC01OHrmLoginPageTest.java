@@ -1,4 +1,4 @@
-package com.xbank.scenarios;
+package com.xbank.sanity;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,7 +12,7 @@ import com.xbank.pageobjectmodle.OrangeHrmLoginPageDiffeentWaysToCallMethods;
 
 public class TC01OHrmLoginPageTest extends BaseCl {
 
-	private static Logger log = LogManager.getLogger(BaseCl.class);
+	private Logger log = LogManager.getLogger(TC01OHrmLoginPageTest.class);
 	@BeforeMethod
 	public void setup() {
 		startBrowser();
@@ -42,7 +42,6 @@ public class TC01OHrmLoginPageTest extends BaseCl {
 	public void logintestApproachThree() {
 		OrangeHrmLoginPageDiffeentWaysToCallMethods loginpage = new OrangeHrmLoginPageDiffeentWaysToCallMethods();
 		//loginpage.login("Admin", "admin123");
-		log.error("comming form logintestApproachThree method (): Title Of the Page "+driver.getTitle());
 		loginpage.loginWithUserProvidedDetails(prs.getProperty("username"), prs.getProperty("password"));
 		log.info("comming form logintestApproachThree method (): Title Of the Page "+driver.getTitle());
 	}

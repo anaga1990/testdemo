@@ -23,7 +23,7 @@ public class PayGradesDetailsTest extends BaseCl{
 		adminMenuPage.clickOnpayGrades();
 		adminMenuPage.FetchDetailsFrompayGrades();
 	}
-	
+	 
 	
 	@BeforeMethod
 	public void beforeMethod() {
